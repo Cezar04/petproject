@@ -1,0 +1,326 @@
+/*resetarea setarilor din browser*/
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    list-style: none;
+}
+/*templateul grid pentru tot situl*/
+body{
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header"
+    "main";    
+}
+/* aici te joci cu valori pentru imaginea de background din index*/
+body img{
+    background-size: cover;
+    width: 165vh;
+    margin:0px;
+}
+/* tot ce tine de top*/
+.top_column{
+    width: 65%;/*daca schimbi marimea pozelor modifica si aici marimea cardului cu scris*/
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    margin-left: 250px;/* idem cu schimbarile si de aici, pt pozitionarea in pagina*/
+    
+   
+}
+.top_column h2,h4{
+    text-align: center;
+}
+/*marimea pozelor*/
+.top_column img{
+    width: 50rem;
+    height: 60rem;
+}
+.card{
+    text-align: center;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+
+/* tot ce este header(logo si navigatia)*/
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 5%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.logo h1,h3{
+  display: inline;
+  letter-spacing: 1px;
+  font-family: 'Shadows Into Light', cursive;
+}
+.logo h1{
+    font-size: 40px;
+}
+.logo h3{
+    font-size: 35px;
+}
+/*navigatia luata separat*/
+.nav{
+    list-style: none;
+}
+
+.nav li{
+    display: inline;
+    padding: 0px 20px;
+}
+
+.nav li a{
+    transition: all 0.1s ease 0s;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.nav li a:hover{
+  color: grey;
+
+}
+
+main{
+    grid-area: main;
+}
+/*zona de meniu pentru perioade*/
+.sidebar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.navi-side{
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 10%;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  text-align: center;
+
+
+}
+
+.sidebar li{
+    padding: 30px;
+    font-size: 1rem;
+}
+
+.sidebar li a{
+    transition: all 0.1s ease 0s;
+    color: rgb(95, 91, 91);
+    font-size: 19px;
+    font-weight: 600;
+    font-weight: bold;
+    letter-spacing: 2px ;
+    
+}
+
+.sidebar li a:hover{
+  color: black;
+}
+/*randurile si coloanele din galerie*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    margin-right: 180px;
+  
+}
+ 
+.column {
+    position: center;
+    flex: 10%;
+    max-width: 50%;
+    padding: 0px 4px;
+    margin-left: 140px; 
+}
+/*textul din top de sub imagini*/
+.column p{
+    text-align: left;
+    font-size: 18px;
+    margin-left: 90px;
+    overflow: auto;
+}
+/*display imagini din coloana*/
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 90%;
+    margin-left: 110px;
+}
+/* smecheria cu suprapunerea de imagine cu text din perioade*/
+.poza{
+    position: relative;
+    width: 100%;
+    max-width: 100vh;
+}
+/* smecheria cu suprapunerea de imagine cu text din perioade*/
+.foto{
+    display: block;
+    width: 80%;
+    height: 80%;
+    margin-left: 170px;
+    padding:40px;
+    margin-bottom: 10px; 
+}
+/* smecheria cu suprapunerea de imagine cu text din perioade*/
+.peste{
+    position: absolute;
+
+    background: rgb(0,0,0);
+    background: rgba(0, 0, 0, 0.8);
+    color:#f1f1f1;
+    width: 60%;
+    transition: .3s ease;
+    opacity: 0;
+    color: white;
+    padding: 0px;
+    text-align: center;
+    margin-left: 230px;    
+}
+.peste h1{
+
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* smecheria cu suprapunerea de imagine cu text din perioade*/
+.poza:hover .peste{
+    opacity: 1;
+}
+/* smecheria cu suprapunerea de imagine cu text din perioade*/
+.galerie{
+    display: flex;
+    flex-wrap: wrap;
+}
+/*formatarea inputului de contact*/
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(109, 103, 103);
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+  
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+  
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+.button2{
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #003366;
+}
+.button2:hover{
+    background-color:#003366;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.container .button:hover {
+    color:white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: tomato;
+}
+.button{
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white; 
+    color:white; 
+    border: 2px solid;
+    background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+}
+.container .button {
+    position: absolute;
+    top: 70%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transition: all 0.5s;
+    cursor: pointer;
+ }
+.container{
+    padding: 0;
+    border: 0;
+}
+.c1{
+    background-color: white;
+}
+.container img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+h5{
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    letter-spacing: 1px;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 100px;
+    position: absolute;
+    top: 45%;
+    left: 70%;
+    color:#ffd662;
+}
+.titlu{
+    text-align: center;
+    display: inline;
+    font-size: 500px;
+    letter-spacing: 1px;
+    font-family: 'Shadows Into Light', cursive;
+    color:black;
+}
+.foto_top{
+    padding-bottom: 10%;
+}

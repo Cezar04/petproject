@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;900&display=swap" rel="stylesheet">
+    <title>Tablouri Celebre</title>
+</head>
+<body>
+
+
+    <header>
+        <div class="logo">
+            <h1>Tablouri </h1>
+            <h3>Celebre</h3>
+            <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Acasa</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="top.html">Top</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+
+            </ul>
+        </nav>
+    </header>
+    <main >
+        <div class="container">
+            <div style="text-align:center">
+              <h2>Contact</h2>
+              <p>Spune-ne parerea ta despre arta!</p>
+            </div>
+            <div class="row">
+              <div class="column">
+                <img src="images/2.jpg" style="width:100%">
+              </div>
+              <div class="column">
+                <form action="#">
+                  <label for="fname">Nume</label>
+                  <input type="text" id="fname" name="Nume" placeholder="Numele tau...">
+                  <label for="lname">Prenume</label>
+                  <input type="text" id="lname" name="Prenume" placeholder="Prenumele tau..">
+                 
+                  <label for="subject">Mesaj</label>
+                  <textarea id="subject" name="subject" placeholder="scrie ceva.." style="height:170px"></textarea>
+                  <!--<input type="submit" value="Submit">-->
+                  <button class="button2" onclick="alert('Multumim pentru mesajul dumneavoastra!')">Trimite</button>
+                </form>
+              </div>
+            </div>
+          </div>
+    </main>
+
+</body>
+</html>
